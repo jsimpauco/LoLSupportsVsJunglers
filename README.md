@@ -26,15 +26,21 @@ Another stat calculated was kda - kill-death/assists ratio (labeled ‘kda’ in
 
 With all calculations complete, the following columns are kept: ‘position’, ‘visionscore’, ‘killparticipation’, and ‘kda’. These columns will be used for the permutation test to help answer the question proposed. The last step taken in cleaning the data was to find any missing values and decide what to do with them. While looking through the data, only 4 NaN values were found and were all in the ‘visionscore’ column. Since there were only 4 missing values out of the entire cleaned dataset, those rows were dropped so they don’t need to be dealt with during the testing. Because of this, ‘visionscore’ was changed to int type as the values are best reflected in this manner.
 
-## Univariate Analysis
+### Univariate Analysis
 The frequency histogram of ‘killparticipation’ illustrates that the stat is somewhat balanced. The shape resembles a normal curve but also contains some outliers at each end. The frequency histogram of ‘visionscore’ conveys that the stat in professional matches is very inconsistent since the plot is positively skewed.
 
-## Bivariate Analysis
+### Bivariate Analysis
 It was initially thought that the scatter plot between ‘killparticipation’ and ‘kda’ would highlight that a higher kill participation stat would result in a higher kda. However, while somewhat true as the plot trends positively, it is also possible to have a high kill participation and low kda as seen in the graph.
 
-## Interesting Aggregates
+### Interesting Aggregates
 While looking at the grouped table, it can be seen that the difference between the grouped means, medians, and standard deviations of ‘killparticipation’ and ‘kda’ is very minimal. In stark contrast, the difference between the grouped means, medians, and standard deviations of ‘visionscore’ is substantial. This helps explain how the histogram of ‘visionscore’ is positively skewed since Supports have a greater mean, median, and standard deviation in comparison to Junglers.
 
 # Assessment of Missingness
+
+### NMAR Analysis
+I believe that there are no columns in the dataset that are considered NMAR. The reasoning behind this belief is that if data is missing, it is because it is dependent on another column. There is also data missing due to missing by design. Since there are rows for both individuals and teams, not all columns are needed or cannot be filled in since entering data for both can be different in some scenarios.
+
+### Missingness Dependency
+The column explored for missingness was the ‘doublekill’ column. The two columns that were used to see if the ‘doublekill’ column is dependent on for its missingness were ‘league’ and ‘result’. The ‘league’ column refers to the professional league that the match was played under. The ‘result’ column refers to if a match was won or lost. Based on the results of the missingness tests, it can be seen that the ‘doublekill’ column’s missingness was dependent on the ‘league’ column and, therefore, MAR. However, when comparing the ‘doublekill’ and ‘result’ columns, the ‘doublekill’ column was not dependent at all on the ‘result column.
 
 # Hypothesis Testing
