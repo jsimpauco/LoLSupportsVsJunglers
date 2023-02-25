@@ -17,6 +17,22 @@ The dataset contains a total of 149232 rows and 123 columns. In particular to th
 
 # Cleaning and EDA
 
+## Data Cleaning
+The first step to cleaning the data was keeping only the rows where the roles were either Support or Jungler. This was done as the study focuses only on those positions on the team and thus removes the unneeded rows from the dataset. The next step that was taken was to keep only the relevant columns that help answer the proposed question. In particular, the columns kept were ‘position’, ‘kills’, ‘deaths’, ‘assists’, ‘teamkills’, and ‘visionscore’. These columns were kept for either later analysis or calculations of new data to be added to the dataset.
+
+Using these columns, the stat kill participation (labeled ‘killparticipation’ in the DataFrame) was calculated. Regarded as one of the most important stats within League of Legends, kill participation determines the proportion of team kills a player was a part of. A higher kill participation is considered better in contrast to a lower kill participation.
+
+Another stat calculated was kda - kill-death/assists ratio (labeled ‘kda’ in the DataFrame) - which shows if a player has a positive or negative performance on the game. A higher kda is considered favorable in comparison to a lower kda.
+
+With all calculations complete, the following columns are kept: ‘position’, ‘visionscore’, ‘killparticipation’, and ‘kda’. These columns will be used for the permutation test to help answer the question proposed. The last step taken in cleaning the data was to find any missing values and decide what to do with them. While looking through the data, only 4 NaN values were found and were all in the ‘visionscore’ column. Since there were only 4 missing values out of the entire cleaned dataset, those rows were dropped so they don’t need to be dealt with during the testing. Because of this, ‘visionscore’ was changed to int type as the values are best reflected in this manner.
+
+## Univariate Analysis
+
+## Bivariate Analysis
+
+## Interesting Aggregates
+
+
 # Assessment of Missingness
 
 # Hypothesis Testing
