@@ -44,3 +44,16 @@ I believe that there are no columns in the dataset that are considered NMAR. The
 The column explored for missingness was the ‘doublekill’ column. The two columns that were used to see if the ‘doublekill’ column is dependent on for its missingness were ‘league’ and ‘result’. The ‘league’ column refers to the professional league that the match was played under. The ‘result’ column refers to if a match was won or lost. Based on the results of the missingness tests, it can be seen that the ‘doublekill’ column’s missingness was dependent on the ‘league’ column and, therefore, MAR. However, when comparing the ‘doublekill’ and ‘result’ columns, the ‘doublekill’ column was not dependent at all on the ‘result column.
 
 # Hypothesis Testing
+
+**Null Hypothesis**: Junglers and Supports have the same impact on a professional League of Legends game.
+**Alternative Hypothesis**: Supports are more important than Junglers in a professional League of Legends game.
+
+With the columns being qualitative, the test statistic of choice is the TVD and significance level is set at 0.05. 
+
+The resulting p-value was 0.0, and thus the null hypothesis is rejected. However, as seen earlier in the bivariate analysis of the ‘visionscore’, there is high variation in the column. Because of this, another permutation test was conducted that only focused on ‘killparticipation’ since it is considered the most important stat within League of Legends.
+
+With the column being quantitative, the test statistic of choice is the difference in means with the significance level still set at 0.05. 
+
+The result p-value was 0.583, and thus the null hypothesis is not rejected.
+
+Based on the results and the question, determining the importance of a role is highly subjective. Thus, the following conclusion is drawn: if vision score, kda, and kill participation are all considered priorities, then Supports may be more useful than the Jungler role. In contrast, if kill participation is the only stat prioritized, then both roles may be considered as providing the same production value.
