@@ -98,4 +98,5 @@ With the column being quantitative, the test statistic of choice is the differen
 
 The result p-value was 0.583, and thus the null hypothesis is not rejected.
 
+### Conclusion
 Based on the results and the question, determining the importance of a role is highly subjective. Thus, the following conclusion is drawn: if vision score, kda, and kill participation are all considered priorities, then Supports may be more useful than the Jungler role. In contrast, if kill participation is the only stat prioritized, then both roles may be considered as providing the same production value.
