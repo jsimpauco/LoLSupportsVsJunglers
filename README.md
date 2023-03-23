@@ -34,14 +34,14 @@ With all calculations complete, the following columns are kept: ‘position’, 
 ### Univariate Analysis
 The frequency histogram of ‘killparticipation’ illustrates that the stat is somewhat balanced. The shape resembles a normal curve but also contains some outliers at each end. The frequency histogram of ‘visionscore’ conveys that the stat in professional matches is very inconsistent since the plot is positively skewed.
 
-<iframe src="assets/lol_kp_hist.html" width=800 height=600 frameBorder></iframe>
+<iframe src="assets/lol_kp_hist.html" width=650 height=450 frameBorder></iframe>
 
-<iframe src="assets/lol_vs_hist.html" width=800 height=600 frameBorder></iframe>
+<iframe src="assets/lol_vs_hist.html" width=650 height=450 frameBorder></iframe>
 
 ### Bivariate Analysis
 It was initially thought that the scatter plot between ‘killparticipation’ and ‘kda’ would highlight that a higher kill participation stat would result in a higher kda. However, while somewhat true as the plot trends positively, it is also possible to have a high kill participation and low kda as seen in the graph.
 
-<iframe src="assets/lol_bifig.html" width=800 height=600 frameBorder></iframe>
+<iframe src="assets/lol_bifig.html" width=650 height=450 frameBorder></iframe>
 
 ### Interesting Aggregates
 While looking at the grouped table, it can be seen that the difference between the grouped means, medians, and standard deviations of ‘killparticipation’ and ‘kda’ is very minimal. In stark contrast, the difference between the grouped means, medians, and standard deviations of ‘visionscore’ is substantial. This helps explain how the histogram of ‘visionscore’ is positively skewed since Supports have a greater mean, median, and standard deviation in comparison to Junglers.
@@ -71,11 +71,11 @@ The column explored for missingness was the ‘doublekill’ column. The two col
 
 Based on the results of the missingness tests, it can be seen that the ‘doublekill’ column’s missingness was dependent on the ‘league’ column and, therefore, MAR. 
 
-<iframe src="assets/mt_fig1.html" width=800 height=600 frameBorder></iframe>
+<iframe src="assets/mt_fig1.html" width=650 height=450 frameBorder></iframe>
 
 However, when comparing the ‘doublekill’ and ‘result’ columns, the ‘doublekill’ column was not dependent at all on the ‘result column.
 
-<iframe src="assets/mt_fig2.html" width=800 height=600 frameBorder></iframe>
+<iframe src="assets/mt_fig2.html" width=650 height=450 frameBorder></iframe>
 
 # Hypothesis Testing
 
@@ -85,13 +85,13 @@ However, when comparing the ‘doublekill’ and ‘result’ columns, the ‘do
 
 With the columns being qualitative, the test statistic of choice is the TVD and significance level is set at 0.05.
 
-<iframe src="assets/perm_fig1.html" width=800 height=600 frameBorder></iframe>
+<iframe src="assets/perm_fig1.html" width=650 height=450 frameBorder></iframe>
 
 The resulting p-value was 0.0, and thus the null hypothesis is rejected. However, as seen earlier in the bivariate analysis of the ‘visionscore’, there is high variation in the column. Because of this, another permutation test was conducted that only focused on ‘killparticipation’ since it is considered the most important stat within League of Legends.
 
 With the column being quantitative, the test statistic of choice is the difference in means with the significance level still set at 0.05.
 
-<iframe src="assets/perm_fig2.html" width=800 height=600 frameBorder></iframe>
+<iframe src="assets/perm_fig2.html" width=650 height=450 frameBorder></iframe>
 
 The resulting p-value was 0.583, and thus the null hypothesis is not rejected.
 
