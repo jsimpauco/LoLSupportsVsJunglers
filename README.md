@@ -1,6 +1,3 @@
-# LoLSupportsVsJunglers
-Project for DSC80 at UCSD
-
 # Introduction
 
 This dataset was retrieved from [Oracle's Elixer](https://oracleselixir.com/tools/downloads) and contains data from all professional League of Legends games that were played in 2022. Within the dataset both individual and team performance stats for every game can be found. Based on the data found, the following question is proposed: Is the Support role in a professional League of Legends game more important in comparison to the Jungler role?
